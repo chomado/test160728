@@ -6,9 +6,9 @@ namespace test160728
     {
         public App()
         {
-            InitializeComponent();
+           // InitializeComponent();
 
-            MainPage = new test160728Page();
+            MainPage = new test160728.MainPage();
         }
 
         protected override void OnStart()
