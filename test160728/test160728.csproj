@@ -51,7 +51,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PhoneTranslator.cs" />
+    <Compile Include="Core.cs" />
     <Compile Include="IDialer.cs" />
     <Compile Include="CallHistoryPage.xaml.cs">
       <DependentUpon>CallHistoryPage.xaml</DependentUpon>
