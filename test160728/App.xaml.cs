@@ -1,14 +1,17 @@
 ﻿using Xamarin.Forms;
+using System;
+using System.Collections.Generic;
 
 namespace test160728
 {
     public partial class App : Application
     {
+        public static List<string> PhoneNumbers { get; set; }
         public App()
         {
-           // InitializeComponent();
-
-            MainPage = new test160728.MainPage();
+            // InitializeComponent();
+            PhoneNumbers = new List<string>();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

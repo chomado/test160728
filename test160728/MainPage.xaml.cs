@@ -38,8 +38,16 @@ namespace test160728
             {
                 var dialer = DependencyService.Get<IDialer>();
                 if (dialer != null)
+                {
+                    App.PhoneNumbers.Add(translatedNumber);
+                    callHistoryButton.IsEnabled = true;
                     dialer.Dial(translatedNumber);
+                }
             }
+        }
+        void OnCallHisotry(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CallHistoryPage());        
         }
     }
 }
