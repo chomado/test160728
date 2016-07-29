@@ -11,5 +11,11 @@ namespace test160728
         {
             InitializeComponent();
         }
+
+        public void OnGoToChatScreen(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ChatPage());
+        }
+
     }
 }
