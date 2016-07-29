@@ -12,10 +12,11 @@ namespace test160728
             InitializeComponent();
         }
 
-        void OnCallHisotry(object sender, EventArgs e)
+        async void OnCallHisotry(object sender, EventArgs e)
         {
-            App.PhoneNumbers.Add(phoneNumberText.Text);
-            Navigation.PushAsync(new CallHistoryPage());        
+            var tweetList = await Core.Twitter.TweetList(phoneNumberText.Text);
+            App.PhoneNumbers.AddRange(tweetList);
+            await Navigation.PushAsync(new CallHistoryPage());        
         }
 
     }
